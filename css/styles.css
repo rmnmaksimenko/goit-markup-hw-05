@@ -481,12 +481,24 @@ img {
 }
 
 .nav-link {
+  position: relative;
   display: flex;
   color: var(--color-third);
   font-weight: 500;
+  min-height: 16px;
   font-size: 14px;
   line-height: 1.142;
   letter-spacing: 0.02em;
+}
+
+.this-page::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: var(--color-fourth);
+  bottom: -32px;
+  border-radius: 2px;
 }
 
 /* ссылка на веб студию */
