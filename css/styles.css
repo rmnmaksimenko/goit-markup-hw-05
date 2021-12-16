@@ -48,7 +48,8 @@ a {
 
 button {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hidden-title {
@@ -500,13 +501,21 @@ img {
 }
 
 .this-page::after {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   content: '';
   position: absolute;
   height: 4px;
-  width: 100%;
+  width: 0;
+  right: 0;
   background-color: var(--color-fourth);
   bottom: -32px;
   border-radius: 2px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.this-page:hover:after {
+  width: 100%;
+  left: 0;
 }
 
 /* ссылка на веб студию */
@@ -697,6 +706,7 @@ img {
   display: block;
   position: relative;
   overflow: hidden;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-thumb {
